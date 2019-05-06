@@ -92,10 +92,11 @@ public:
     //// -------------------------
 
     char* Instrument[] = {"al1906","cu1906"};  // 注意品种的大小写
+    int len = sizeof(Instrument)/sizeof(Instrument[0]);
     // char* Instrument[] = {"cu1608", "cu1606"};  // 注意品种的大小写
-    int ret1 = m_pUserApi->SubscribeMarketData(Instrument, 2);
+    int ret1 = m_pUserApi->SubscribeMarketData(Instrument, len);
     //int ret2 = m_pUserApi->UnSubscribeMarketData(Instrument, 2);
-    int ret3 = m_pUserApi->SubscribeForQuoteRsp(Instrument, 2);
+    int ret3 = m_pUserApi->SubscribeForQuoteRsp(Instrument, len);
     //int ret4 = m_pUserApi->UnSubscribeForQuoteRsp(Instrument, 2);
   }
 
